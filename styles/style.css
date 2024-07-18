@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{    /*variable para fuentes y evitar luego cambiar una por una,
+            igual para cualquier elemento que se repita mucho. MDN*/
+    --fuente-montse: "montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+* {                 /*este es el reset*/
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color:#020122;
+    color: white;
+    box-sizing: border-box
+}
+
+.header {
+    padding: 2% 0% 0% 13%;
+    height: 10px;
+}
+
+.header__menu {
+        font-family: var(--fuente-montse);
+        font-size: 1.5rem;  /*Teniendo como base un texto de 16px que es = a 1rem*/
+        font-weight: 600;
+        color: #21d6c1;
+        display: flex;
+        gap: 35px;
+        
+}
+    
+.header__menu__link {
+        color: #21d6c1;
+        text-decoration: none;
+        font-size: 1.125rem;
+        margin: 0 10px;
+        padding: 10px 15px;
+        text-decoration: none;
+}
+    
+.header__menu__link:hover {
+        color: white;
+}
+
+.presentacion {
+    padding: 4.5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    
+}
+
+.presentacion__contenido{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+}
+
+
+.presentacion__contenido__titulo{
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque {
+    color: #f5bb00;
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montse);
+}
+
+.subtitulo__enlaces {
+    display: flex;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color:hsl(45, 80%, 48%);
+}
+
+.presentacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0%;
+    gap: 21px;
+}
+
+.presentacion__enlaces__link {
+    width:70%;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-family: var(--fuente-montse);
+    font-size: 0.875em;
+    font-weight: 400;
+    text-decoration: none;
+    color:#ffffff;
+    border: 2px solid #21d6c1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 12px;
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: rgb(37, 56, 76);    
+}
+
+.presentacion__img{
+    width: 49%;
+    height: 49%;
+}
+
+.footer{
+    width: auto;
+    background-color: #21d6c1;
+    padding: 1.5rem;
+    color: black;
+    text-align: center;
+    font-family: var(--fuente-montse);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){   /*MEDIA QUERIES, ajuste para mobiles
+                               cuando la pantalla sea de menos de 1200px*/
+    .header{
+        padding: 5%;
+    }
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion {
+        flex-direction: column-reverse;
+    }
+    .presentacion__contenido{
+        width: auto;
+    }
+    .presentacion__enlaces{
+        justify-content: center;
+        gap: 21px;
+    }
+    .presentacion__enlaces__link{
+        font-size: 0.55rem;
+        gap: 5px;
+    }
+}
